@@ -1,0 +1,6 @@
+ghdl -a --ieee=synopsys constants.vhd
+ghdl -a --ieee=synopsys BC_adder.vhd
+ghdl -a --ieee=synopsys P4_Adder.vhd
+ghdl -a --ieee=synopsys tb.vhd
+ghdl -r --ieee=synopsys P4_ADDER_tb  --vcd=ciao.vcd;
+gtkwave ciao.vcd
