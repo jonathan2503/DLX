@@ -1,0 +1,5 @@
+ghdl -a --ieee=synopsys constants.vhd
+ghdl -a --ieee=synopsys RAM.vhd
+ghdl -a --ieee=synopsys tb.vhd
+ghdl -r --ieee=synopsys RAM_tb  --vcd=ciao.vcd;
+gtkwave ciao.vcd
