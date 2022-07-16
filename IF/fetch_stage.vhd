@@ -27,7 +27,9 @@ use IEEE.NUMERIC_STD.ALL;
 entity fetch_stage is
 Port (
 CLK,RST,EN_LATCH_PC,EN_LATCH_NPC,EN_LATCH_IR: IN std_logic;
-PC_EXT: IN std_logic_vector(31 downto 0);
+PC_IN: IN std_logic_vector(31 downto 0);
+PC_OUT : out std_logic_vector(31 downto 0);
+IR: in std_logic_vector(31 downto 0);
 IR_EXT: OUT std_logic_vector(31 downto 0);
 NPC_EXT: OUT std_logic_vector(31 downto 0)
  );
@@ -46,12 +48,12 @@ component REG is
 	);
 end component;
 
-SIGNAL PC,NPC,IR : std_logic_vector(31 DOWNTO 0);
+SIGNAL NPC,PC: std_logic_vector(31 DOWNTO 0);
 
 begin
 
 reg1: REG PORT MAP(
-                    INPUT=>PC_EXT,
+                    INPUT=>PC_IN,
                     CLK => CLK, 
                     ENABLE=>EN_LATCH_PC, 
                     RESET=>RST,
@@ -71,6 +73,7 @@ reg3: REG PORT MAP(
                     ENABLE=>EN_LATCH_NPC, 
                     RESET=>RST,
                     OUTPUT=>NPC_EXT);
+                    
 NPC <= std_logic_vector(UNSIGNED(PC)+4);
-
+PC_OUT<= PC;
 end Behavioral;
