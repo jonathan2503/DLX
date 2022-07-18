@@ -22,6 +22,5 @@ clk:    in  std_logic ;
 
 -------------- output from stage--------------
 Dout_mem:  OUT  std_logic_vector( 31 downto 0)
-);
 ```
 ### WB
