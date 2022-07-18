@@ -1,5 +1,5 @@
 ## DLX
-
+Here we will write down the interface between the stages.
 ### IF
 
 ### ID
