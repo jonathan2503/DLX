@@ -34,7 +34,8 @@ S3_3:    in  std_logic ;
 en:      in  std_logic ;
 holds:   in  std_logic ;
 -- if holds = '0' then  the flag can't hold a value and track the carry signal in input
--- if holds = '1' then  flag active hold the previeus value also if the input change ( so in next stage is possible to read the value) 
+-- if holds = '1' then  flag active hold the previeus value also if the input change 
+--( so in next stage is possible to read the value) 
 clk:     in  std_logic ;
 
 
