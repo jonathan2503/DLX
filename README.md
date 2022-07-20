@@ -70,3 +70,11 @@ clk:    in  std_logic ;
 Dout_mem:  OUT  std_logic_vector( 31 downto 0)
 ```
 ### WB
+```vhdl
+
+CLK :IN std_logic
+CTR_MUX: IN std_logic;
+ALU_OUTPUT: IN std_logic_vector(31 downto 0);
+MEM_OUTPUT: IN std_logic_vector(31 downto 0);
+OUTPUT: OUT std_logic_vector(31 downto 0));
+```
