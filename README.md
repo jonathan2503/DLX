@@ -40,7 +40,8 @@ clk:     in  std_logic ;
 
 
 -- output from stage
-alu_out:  OUT  std_logic_vector( 31 downto 0)
+alu_out:  OUT  std_logic_vector( 31 downto 0);
+alu_mems:  OUT  std_logic_vector( 31 downto 0)
     );
 end  exe_stage;
 
