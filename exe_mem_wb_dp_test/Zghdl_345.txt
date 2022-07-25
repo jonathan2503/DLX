@@ -1,0 +1,18 @@
+ghdl -a --ieee=synopsys constants.vhd
+ghdl -a --ieee=synopsys BC_adder.vhd
+ghdl -a --ieee=synopsys P4_Adder.vhd
+ghdl -a --ieee=synopsys demux.vhd
+ghdl -a --ieee=synopsys MeM_RF.vhd
+ghdl -a --ieee=synopsys flag.vhd
+ghdl -a --ieee=synopsys mux.vhd
+ghdl -a --ieee=synopsys muxone.vhd
+ghdl -a --ieee=synopsys MeM_RF.vhd
+ghdl -a --ieee=synopsys mux.vhd
+ghdl -a --ieee=synopsys Ram.vhd
+ghdl -a --ieee=synopsys stage_exe.vhd
+ghdl -a --ieee=synopsys stage_mem.vhd
+ghdl -a --ieee=synopsys stage_wb.vhd
+ghdl -a --ieee=synopsys Z_tri_stage.vhd
+ghdl -a --ieee=synopsys tb_tri.vhd
+ghdl -r --ieee=synopsys tri_stage_tb  --vcd=ciao.vcd;
+gtkwave ciao.vcd

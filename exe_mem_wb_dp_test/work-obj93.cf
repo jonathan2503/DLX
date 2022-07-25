@@ -1,0 +1,70 @@
+v 4
+file . "Z_tri_stage.vhd" "5893f12936c3b6a6a835373723d4fefe69dff11c" "20220724204326.868":
+  entity tri_stage at 1( 0) + 0 on 249;
+  architecture exe_mem_wb of tri_stage at 41( 914) + 0 on 250;
+file . "stage_mem.vhd" "772d1efb72f6d5cec186f13c706a60cf9264b7b2" "20220724204231.893":
+  entity memory_stage at 1( 0) + 0 on 245;
+  architecture structural of memory_stage at 26( 468) + 0 on 246;
+file . "Ram.vhd" "58352756333f9faf8f56d0742d976fec9d711290" "20220724204231.788":
+  entity ram at 6( 188) + 0 on 241;
+  architecture behevioural of ram at 30( 754) + 0 on 242;
+file . "mux.vhd" "ee914622ea70a88fdc713ab06704e8af33afbb1c" "20220724204231.738":
+  entity mux21 at 1( 0) + 0 on 239;
+  architecture behavioral of mux21 at 15( 241) + 0 on 240;
+file . "MeM_RF.vhd" "152f9080b54538aef5473214a67b2d3f9826ed6f" "20220724204231.693":
+  entity rf at 1( 0) + 0 on 237;
+  architecture behevioural of rf at 17( 280) + 0 on 238;
+file . "P4_Adder.vhd" "f1cb5f44e0bfabed7187631b4ce923b8f51109e7" "20220724204231.373":
+  entity sum_generator at 1( 0) + 0 on 218;
+  architecture structural of sum_generator at 19( 503) + 0 on 219;
+  configuration cfg_sum_generator_structural at 50( 1397) + 0 on 220;
+  entity carry_generator at 65( 2053) + 0 on 221;
+  architecture structural of carry_generator at 88( 2521) + 0 on 222;
+  configuration cfg_carry_generator_structural at 193( 5640) + 0 on 223;
+  entity p4_adder at 231( 6603) + 0 on 224;
+  architecture structural of p4_adder at 257( 7012) + 0 on 225;
+  configuration cfg_p4_adder_structural at 330( 8555) + 0 on 226;
+file . "constants.vhd" "6b703d4d9c878fc876b03c0aa80d659af3bd355e" "20220724204231.184":
+  package constants at 1( 0) + 0 on 194;
+file . "BC_adder.vhd" "d15f148cabc5d06c85327d58048d7f4936a966e6" "20220724204231.301":
+  package high_math at 6( 305) + 0 on 195 body;
+  package body high_math at 14( 484) + 0 on 196;
+  entity fa at 38( 1124) + 0 on 197;
+  architecture behavioral of fa at 50( 1308) + 0 on 198;
+  configuration cfg_fa_behavioral at 60( 1444) + 0 on 199;
+  entity g at 69( 1842) + 0 on 200;
+  architecture bhe of g at 83( 2047) + 0 on 201;
+  configuration cfg_g_bhe at 93( 2129) + 0 on 202;
+  entity mux at 103( 2503) + 0 on 203;
+  architecture behav of mux at 120( 2874) + 0 on 204;
+  configuration cfg_mux at 144( 3208) + 0 on 205;
+  entity f_add at 155( 3583) + 0 on 206;
+  architecture bhe of f_add at 168( 3870) + 0 on 207;
+  configuration cfg_f_add_structural at 179( 3967) + 0 on 208;
+  entity pg at 193( 4371) + 0 on 209;
+  architecture bhe of pg at 208( 4748) + 0 on 210;
+  configuration cfg_pg_bhe at 221( 4885) + 0 on 211;
+  entity rca at 227( 4958) + 0 on 212;
+  architecture structural of rca at 253( 5659) + 0 on 213;
+  configuration cfg_rca_structural at 286( 6412) + 0 on 214;
+  entity csb at 301( 6923) + 0 on 215;
+  architecture structural of csb at 323( 7311) + 0 on 216;
+  configuration cfg_csb_structural at 366( 8363) + 0 on 217;
+file . "demux.vhd" "2157cdea87b0b229b77697182da374d3eb69e09f" "20220724204231.441":
+  entity demux1n at 1( 0) + 0 on 227;
+  architecture de2 of demux1n at 17( 220) + 0 on 228;
+file . "flag.vhd" "cc8919daee95d1981e4d2ec9eeba33b6be128aab" "20220724204231.553":
+  entity flag at 1( 0) + 0 on 231;
+  architecture behevioural of flag at 20( 326) + 0 on 232;
+file . "muxone.vhd" "f11b140d77811be341135baf7fdf668ec88fdf76" "20220724204231.645":
+  entity muxone at 1( 0) + 0 on 235;
+  architecture behavioral of muxone at 14( 158) + 0 on 236;
+file . "stage_exe.vhd" "879be063c1ce9225632cdcb65d687d4dabed7601" "20220724204231.836":
+  entity exe_stage at 1( 0) + 0 on 243;
+  architecture structural of exe_stage at 33( 651) + 0 on 244;
+file . "stage_wb.vhd" "0466cc7ef69f57792f34468b34f23b4283f148df" "20220724204233.442":
+  entity wb_stage at 1( 0) + 0 on 247;
+  architecture behavioral of wb_stage at 14( 254) + 0 on 248;
+file . "tb_tri.vhd" "032eb878032bf6dfc4572d91d5bc8b1ae732b43f" "20220724204614.733":
+  entity tri_stage_tb at 1( 0) + 0 on 251;
+  architecture bench of tri_stage_tb at 8( 99) + 0 on 252;
