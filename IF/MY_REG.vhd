@@ -18,13 +18,13 @@ architecture Behavioral of MY_REG is
 
 begin
 
-PROCESS(D,CLK,RESET,ENABLE)
+
+PROCESS(CLK,D,RESET,ENABLE)
 begin
-IF RESET <= '1' then
-Q <= (OTHERS => '0');
-ELSIF rising_edge(CLK) AND ENABLE <= '1'then
+IF (RESET = '1')THEN
+Q <= (others => '0');
+ELSIF (rising_edge(CLK)AND ENABLE = '1') THEN
 Q <= D;
 END IF;
 END PROCESS;
-
 end Behavioral;
