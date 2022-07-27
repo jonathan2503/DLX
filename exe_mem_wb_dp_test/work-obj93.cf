@@ -1,0 +1,73 @@
+v 4
+file . "tb_tri.vhd" "d47ae071e04420f7d1f4e29de97a353ce7d9e2bf" "20220727075521.171":
+  entity tri_stage_tb at 1( 0) + 0 on 310;
+  architecture bench of tri_stage_tb at 8( 99) + 0 on 311;
+file . "stage_wb.vhd" "2e58ec2818a8308617e21b46c2f8282cf7d8ef0a" "20220727075521.075":
+  entity wb_stage at 1( 0) + 0 on 306;
+  architecture behavioral of wb_stage at 16( 284) + 0 on 307;
+file . "stage_exe.vhd" "879be063c1ce9225632cdcb65d687d4dabed7601" "20220727075520.966":
+  entity exe_stage at 1( 0) + 0 on 302;
+  architecture structural of exe_stage at 33( 651) + 0 on 303;
+file . "Ram.vhd" "58352756333f9faf8f56d0742d976fec9d711290" "20220727075520.875":
+  entity ram at 6( 188) + 0 on 298;
+  architecture behevioural of ram at 30( 754) + 0 on 299;
+file . "mux.vhd" "ee914622ea70a88fdc713ab06704e8af33afbb1c" "20220727075520.824":
+  entity mux21 at 1( 0) + 0 on 296;
+  architecture behavioral of mux21 at 15( 241) + 0 on 297;
+file . "MeM_RF.vhd" "152f9080b54538aef5473214a67b2d3f9826ed6f" "20220727075520.764":
+  entity rf at 1( 0) + 0 on 294;
+  architecture behevioural of rf at 17( 280) + 0 on 295;
+file . "P4_Adder.vhd" "f1cb5f44e0bfabed7187631b4ce923b8f51109e7" "20220727075520.438":
+  entity sum_generator at 1( 0) + 0 on 275;
+  architecture structural of sum_generator at 19( 503) + 0 on 276;
+  configuration cfg_sum_generator_structural at 50( 1397) + 0 on 277;
+  entity carry_generator at 65( 2053) + 0 on 278;
+  architecture structural of carry_generator at 88( 2521) + 0 on 279;
+  configuration cfg_carry_generator_structural at 193( 5640) + 0 on 280;
+  entity p4_adder at 231( 6603) + 0 on 281;
+  architecture structural of p4_adder at 257( 7012) + 0 on 282;
+  configuration cfg_p4_adder_structural at 330( 8555) + 0 on 283;
+file . "constants.vhd" "6b703d4d9c878fc876b03c0aa80d659af3bd355e" "20220727075520.337":
+  package constants at 1( 0) + 0 on 251;
+file . "BC_adder.vhd" "d15f148cabc5d06c85327d58048d7f4936a966e6" "20220727075520.390":
+  package high_math at 6( 305) + 0 on 252 body;
+  package body high_math at 14( 484) + 0 on 253;
+  entity fa at 38( 1124) + 0 on 254;
+  architecture behavioral of fa at 50( 1308) + 0 on 255;
+  configuration cfg_fa_behavioral at 60( 1444) + 0 on 256;
+  entity g at 69( 1842) + 0 on 257;
+  architecture bhe of g at 83( 2047) + 0 on 258;
+  configuration cfg_g_bhe at 93( 2129) + 0 on 259;
+  entity mux at 103( 2503) + 0 on 260;
+  architecture behav of mux at 120( 2874) + 0 on 261;
+  configuration cfg_mux at 144( 3208) + 0 on 262;
+  entity f_add at 155( 3583) + 0 on 263;
+  architecture bhe of f_add at 168( 3870) + 0 on 264;
+  configuration cfg_f_add_structural at 179( 3967) + 0 on 265;
+  entity pg at 193( 4371) + 0 on 266;
+  architecture bhe of pg at 208( 4748) + 0 on 267;
+  configuration cfg_pg_bhe at 221( 4885) + 0 on 268;
+  entity rca at 227( 4958) + 0 on 269;
+  architecture structural of rca at 253( 5659) + 0 on 270;
+  configuration cfg_rca_structural at 286( 6412) + 0 on 271;
+  entity csb at 301( 6923) + 0 on 272;
+  architecture structural of csb at 323( 7311) + 0 on 273;
+  configuration cfg_csb_structural at 366( 8363) + 0 on 274;
+file . "demux.vhd" "2157cdea87b0b229b77697182da374d3eb69e09f" "20220727075520.488":
+  entity demux1n at 1( 0) + 0 on 284;
+  architecture de2 of demux1n at 17( 220) + 0 on 285;
+file . "flag.vhd" "cc8919daee95d1981e4d2ec9eeba33b6be128aab" "20220727075520.623":
+  entity flag at 1( 0) + 0 on 288;
+  architecture behevioural of flag at 20( 326) + 0 on 289;
+file . "muxone.vhd" "f11b140d77811be341135baf7fdf668ec88fdf76" "20220727075520.715":
+  entity muxone at 1( 0) + 0 on 292;
+  architecture behavioral of muxone at 14( 158) + 0 on 293;
+file . "orr.vhd" "d1292da56add68842801ffa04eb4bf27fa60102d" "20220727075520.919":
+  entity orr at 1( 0) + 0 on 300;
+  architecture behavioral of orr at 13( 133) + 0 on 301;
+file . "stage_mem.vhd" "772d1efb72f6d5cec186f13c706a60cf9264b7b2" "20220727075521.013":
+  entity memory_stage at 1( 0) + 0 on 304;
+  architecture structural of memory_stage at 26( 468) + 0 on 305;
+file . "Z_tri_stage.vhd" "c038b6e60fd4fa9d89b4bb340389c3c903fdd7b6" "20220727075521.125":
+  entity tri_stage at 1( 0) + 0 on 308;
+  architecture exe_mem_wb of tri_stage at 41( 945) + 0 on 309;
