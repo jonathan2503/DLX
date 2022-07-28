@@ -1,24 +1,3 @@
-----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 14.07.2022 18:41:42
--- Design Name: 
--- Module Name: fetch_stage - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
-----------------------------------------------------------------------------------
-
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
@@ -36,15 +15,15 @@ NPC_EXT: OUT std_logic_vector(31 downto 0)
 end fetch_stage;
 
 architecture Behavioral of fetch_stage is
-component REG is
+component MY_REG is
 	GENERIC(
 		NBIT : integer:=32 );
 	PORT(
-		INPUT : IN std_logic_vector(NBIT-1 downto 0);
+		D : IN std_logic_vector(NBIT-1 downto 0);
 		CLK : IN std_logic;
-		ENABLE: IN std_logic;
-		RESET : IN std_logic;
-		OUTPUT : OUT std_logic_vector(NBIT-1 downto 0)
+		RESET: IN std_logic;
+		ENABLE : IN std_logic;
+		Q: OUT std_logic_vector(NBIT-1 downto 0)
 	);
 end component;
 
@@ -52,27 +31,27 @@ SIGNAL NPC,PC: std_logic_vector(31 DOWNTO 0);
 
 begin
 
-reg1: REG PORT MAP(
-                    INPUT=>PC_IN,
+reg1: MY_REG PORT MAP(
+                    D=>PC_IN,
                     CLK => CLK, 
+                    RESET=>RST,
                     ENABLE=>EN_LATCH_PC, 
-                    RESET=>RST,
-                    OUTPUT=>PC );
+                    Q=>PC );
                     
-reg2: REG PORT MAP(
-                    INPUT=>IR,
+reg2: MY_REG PORT MAP(
+                    D=>IR,
                     CLK => CLK, 
-                    ENABLE=>EN_LATCH_IR, 
                     RESET=>RST,
-                    OUTPUT=>IR_EXT );
+                    ENABLE=>EN_LATCH_IR, 
+                    Q=>IR_EXT );
               
 
-reg3: REG PORT MAP(
-                    INPUT=>NPC,
-                    CLK => CLK, 
+reg3: MY_REG PORT MAP(
+                    D=>NPC,
+                    CLK => CLK,
+                    RESET=>RST, 
                     ENABLE=>EN_LATCH_NPC, 
-                    RESET=>RST,
-                    OUTPUT=>NPC_EXT);
+                    Q=>NPC_EXT);
                     
 NPC <= std_logic_vector(UNSIGNED(PC)+4);
 PC_OUT<= PC;
