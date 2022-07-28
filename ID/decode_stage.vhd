@@ -1,3 +1,5 @@
+
+--DOVREBBE IMPIEGARE DUE CICLI DI CLOCK
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.std_logic_unsigned.all;
@@ -79,14 +81,16 @@ sel: in std_logic;
 Y: out std_logic_vector(0 TO N-1));
 end component;
 
-component REG is
-    Generic(NBIT: integer);
-	Port  ( 
-	    D:	IN	std_logic_vector(0 TO NBIT-1);
-		CK:	IN	std_logic;
-		EN : IN std_logic;
-		RESET:	IN	std_logic;
-		Q:	OUT	std_logic_vector(0 TO NBIT-1));
+component MY_REG is
+	GENERIC(
+		NBIT : integer:=32 );
+	PORT(
+		D : IN std_logic_vector(NBIT-1 downto 0);
+		CLK : IN std_logic;
+		RESET: IN std_logic;
+		ENABLE : IN std_logic;
+		Q: OUT std_logic_vector(NBIT-1 downto 0)
+	);
 end component;
 
 COMPONENT sign_extender_16 is
@@ -131,32 +135,32 @@ MUX_2: MUX21 GENERIC MAP(N=>5)
                         Y=> RD_EXT);     
                                            
                         
-R1: REG GENERIC MAP(NBIT=>5)
+R1:MY_REG GENERIC MAP(NBIT=>5)
         PORT MAP( D => RD_EXT,
-                  CK => CLK,
-                  EN => EN1,
+                  ClK => CLK,
                   RESET => RESET,
+                  ENABLE => EN1,
                   Q => RD); 
                                          
-R2: REG GENERIC MAP(NBIT=>32)
+R2: MY_REG GENERIC MAP(NBIT=>32)
         PORT MAP( D => IMM_EXT,
-                  CK => CLK,
-                  EN => EN1,
+                  CLK => CLK,
                   RESET => RESET,
+                  ENABLE => EN1,
                   Q => IN2);
                 
-R3: REG GENERIC MAP(NBIT=>32)
+R3: MY_REG GENERIC MAP(NBIT=>32)
         PORT MAP( D => OUT1,
-                  CK => CLK,
-                  EN => EN1,
+                  CLK => CLK,
                   RESET => RESET,
+                  ENABLE => EN1,
                   Q => A);
                
-R4: REG GENERIC MAP(NBIT=>32)
+R4: MY_REG GENERIC MAP(NBIT=>32)
         PORT MAP( D => OUT2,
-                  CK => CLK,
-                  EN => EN1,
+                  CLK => CLK,
                   RESET => RESET,
+                  ENABLE => EN1,
                   Q => B);
            
 WR: windowed_rf GENERIC MAP (
@@ -185,4 +189,3 @@ WR: windowed_rf GENERIC MAP (
                   
 
 end Behavioral;
-
