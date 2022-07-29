@@ -73,8 +73,11 @@ Dout_mem:  OUT  std_logic_vector( 31 downto 0)
 ```vhdl
 
 CLK :IN std_logic
-CTR_MUX: IN std_logic;
 ALU_OUTPUT: IN std_logic_vector(31 downto 0);
 MEM_OUTPUT: IN std_logic_vector(31 downto 0);
+CTR_MUX: IN std_logic;
+       -- if CTR_MUX = '0'\ alu data (calc from alu)
+       -- if CTR_MUX = '1'\  (data from mem)
+
 OUTPUT: OUT std_logic_vector(31 downto 0));
 ```
