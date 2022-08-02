@@ -6,11 +6,11 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity Shifter is
 Port (
-A: IN std_logic_vector(31 DOWNTO 0);--valore da shiftare
-B: IN std_logic_vector(31 DOWNTO 0);--quanto shiftare il valore
-R_L : IN std_logic;--destra o sinistra
-L_A: IN std_logic;--logic or arithmetic
-S_R: IN std_logic; --shift or rotate
+A: IN std_logic_vector(31 DOWNTO 0);--value to shift
+B: IN std_logic_vector(31 DOWNTO 0);--how much to shift
+R_L : IN std_logic;--right->0, left->1
+L_A: IN std_logic;--logic->0, arithmetic->1
+S_R: IN std_logic; --shift->0, rotate->1
 Y: OUT std_logic_vector(31 downto 0)--output
  );
 end Shifter;
