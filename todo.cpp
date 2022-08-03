@@ -12,7 +12,7 @@ class Basic_operation
 	subi
 	nop
 	]
-	case logical_operation[
+	case logical_operation[  //done
     and
 	andi
 	or
