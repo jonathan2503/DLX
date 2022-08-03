@@ -8,8 +8,8 @@ class Basic_operation
 	case std_operation [
     // add    (done)
     // addi   (done)
-	sub
-	subi
+    //  sub (done)
+    //	subi (done)
 	nop
 	]
 	case logical_operation[  //done
