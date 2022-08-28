@@ -1,8 +1,0 @@
-ghdl -a --ieee=synopsys MeM_RF.vhd
-ghdl -a --ieee=synopsys mux.vhd
-ghdl -a --ieee=synopsys constants.vhd
-ghdl -a --ieee=synopsys Ram.vhd
-ghdl -a --ieee=synopsys COMP.vhd
-ghdl -a --ieee=synopsys TB_MEM.vhd
-ghdl -r --ieee=synopsys memory_stage_tb  --vcd=ciao.vcd;
-gtkwave ciao.vcd
