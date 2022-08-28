@@ -1,1 +1,0 @@
-I inserted IRAM into this folder ONLY for debugging reasons. However IRAM, as DRAM, has to be considered not only outside the fetch stage but even outside the datapath. 
