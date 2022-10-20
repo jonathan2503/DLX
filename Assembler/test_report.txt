@@ -1,0 +1,33 @@
+addi r1,r0,2     ok
+addi r2,r0,8     ok
+addi r3,r0,2     ok
+add r4,r2,r1     ok
+sll r5,r2,r1     ok
+srl r6,r2,r1     ok    
+sra r7,r2,r1     ok    --need neg test
+addu r8,r2,r1    ok
+sub r9,r2,r1      ok
+subu r10,r2,r1    ok
+and r11,r2,r1     ok
+or r12,r2,r1      ok
+xor r13,r2,r1     ok
+seq r14,r1,r3     ok
+sne r15,r1,r2     ok
+slt r16,r1,r2     ok
+sgt r17,r2,r1     ok
+sle r18,r1,r2     ok
+sge r19,r2,r1     ok
+sltu r20,r1,r2    ok    --need neg test
+sgtu r21,r2,r1    ok    --need neg test
+sleu r22,r1,r2    ok    --need neg test
+sgeu r23,r2,r1    ok    --need neg test
+j lable
+addi r24,r0,1
+label:
+jal lable2
+addi r25,r0,1
+lable2:
+addi r26,r0,10
+nop
+nop
+

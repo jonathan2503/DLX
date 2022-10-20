@@ -1,0 +1,12 @@
+addi r1,r0,32767
+addi r2,r0,-32768
+slt  r4,r1,r2
+slt  r5,r2,r1
+sgt  r6,r2,r1
+sgt  r7,r1,r2
+addi r1,r0,-327
+addi r2,r0,-32768
+slt  r8,r1,r2
+slt  r9,r2,r1
+sgt  r10,r2,r1
+sgt  r11,r1,r2
